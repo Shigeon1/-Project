@@ -2,7 +2,7 @@ bl_info = {
     "name": "Finger Bone Collision & Grabbing",
     "blender": (3, 6, 0),
     "version": (1, 0, 0),
-    "location": "Properties > Armature",
+    "location": "View3D > N-Panel",
     "description": "Lightweight addon for posing hands with clean object contact. Finger bones stop on mesh collision.",
     "author": "Shigeon1",
     "category": "Rigging",
@@ -171,12 +171,12 @@ class FINGERBONE_OT_ClearCollision(Operator):
 
 
 class FINGERBONE_PT_MainPanel(Panel):
-    """Main panel for finger collision addon"""
+    """Main panel for finger collision addon in N-tab"""
     bl_label = "Finger Bone Collision"
     bl_idname = "FINGERBONE_PT_main"
-    bl_space_type = 'PROPERTIES'
-    bl_region_type = 'WINDOW'
-    bl_context = "data"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Rigging'
     
     @classmethod
     def poll(cls, context):
